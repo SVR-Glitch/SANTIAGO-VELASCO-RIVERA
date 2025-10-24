@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog de Santiago Velasco Rivera</title>
+
+  <!-- TailwindCSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Fuentes -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      transition: background-color 0.7s ease, color 0.7s ease;
+      background-color: #111827; /* modo oscuro por defecto */
+      color: #f9fafb;
+      scroll-behavior: smooth;
+      cursor: url('https://cur.cursors-4u.net/cursors/cur-2/cur115.cur'), auto;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Poppins', sans-serif;
+      transition: color 0.7s ease;
+    }
+
+    /* --- MODO CLARO --- */
+    .light-mode {
+      background-color: #fdf6e3; /* fondo crema */
+      color: #1a1a1a;
+    }
+
+    .light-mode h1,
+    .light-mode h2,
+    .light-mode h3 {
+      color: #111827 !important;
+    }
+
+    .light-mode p,
+    .light-mode li,
+    .light-mode a,
+    .light-mode span {
+      color: #222222 !important;
+    }
+
+    .light-mode .bg-gray-800,
+    .light-mode .bg-gray-900 {
+      background-color: #fffaf0 !important;
+      color: #111827 !important;
+    }
+
+    .light-mode a {
+      color: #1f2937 !important;
+    }
+
+    .theme-toggle {
+      cursor: pointer;
+      font-size: 1.6rem;
+      transition: transform 0.3s ease;
+    }
+
+    .theme-toggle:hover {
+      transform: scale(1.2);
+    }
+
+    /* --- SCROLL OFFSET PARA ANCLAS --- */
+    section {
+      scroll-margin-top: 120px; /* espacio para la barra fija */
+    }
+
+    nav a {
+      scroll-margin-top: 120px;
+    }
+  </style>
+</head>
+
+<body class="transition-all duration-700 ease-in-out">
+
+  <!-- Encabezado -->
+  <header class="relative text-center py-10 bg-gray-900">
+    <h1 class="text-5xl font-bold text-white">Santiago Velasco Rivera</h1>
+
+    <!-- Botón de cambio de tema -->
+    <button id="theme-toggle" class="absolute top-6 right-6 theme-toggle text-blue">
+      🌙
+    </button>
+  </header>
+
+  <!-- NAVBAR FIJA -->
+  <nav class="bg-gray-800 sticky top-0 z-50 backdrop-blur-md shadow-md">
+    <ul class="flex justify-center flex-wrap text-white text-lg font-medium">
+      <li class="px-4 py-3 hover:bg-gray-700"><a href="#acerca">Acerca de mí</a></li>
+      <li class="px-4 py-3 hover:bg-gray-700"><a href="#identidad">Identidad y propósito</a></li>
+      <li class="px-4 py-3 hover:bg-gray-700"><a href="#educacion">Educación</a></li>
+      <li class="px-4 py-3 hover:bg-gray-700"><a href="#virtudes">Virtudes</a></li>
+      <li class="px-4 py-3 hover:bg-gray-700"><a href="#redes">Redes Sociales</a></li>
+      <li class="px-4 py-3 hover:bg-gray-700"><a href="#motivacion">Motivación</a></li>
+      <li class="px-4 py-3 hover:bg-gray-700"><a href="#blog">Reflexiones Personales</a></li>
+      <li class="px-4 py-3 hover:bg-gray-700"><a href="#colaboradores">Colaboradores</a></li>
+      <li class="px-4 py-3 hover:bg-gray-700"><a href="#contacto">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <main class="max-w-6xl mx-auto py-10 space-y-14 px-4">
+
+    <!-- ACERCA DE MÍ -->
+    <section id="acerca" class="bg-gray-800 rounded-2xl shadow-xl p-10 scroll-mt-32 transition-all duration-700 ease-in-out">
+      <div class="flex flex-col md:flex-row items-start gap-8">
+        <!-- Imagen -->
+        <img
+          src="../foto_svr.jpg"
+          alt="Foto de Santiago Velasco Rivera"
+          class="w-48 h-48 rounded-full border-4 border-indigo-500 shadow-lg object-cover flex-shrink-0"
+          onerror="this.src='https://i.imgur.com/JR3qY8r.png';"
+        >
+
+        <!-- Texto -->
+        <div class="flex-1">
+          <h2 class="text-3xl md:text-4xl font-semibold mb-4 text-white">
+            Acerca de mí
+          </h2>
+          <p class="leading-relaxed text-gray-300">
+            Soy un apasionado por la creatividad, la comunicación y el desarrollo de ideas con impacto.
+            Me gusta combinar la tecnología con la expresión humana para crear proyectos que inspiren y conecten a las personas.
+            Mi enfoque se basa en la autenticidad, la colaboración y la búsqueda constante de crecimiento personal y profesional.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- IDENTIDAD Y PROPÓSITO -->
+    <section id="identidad" class="bg-gray-800 rounded-2xl shadow-xl p-10 text-center">
+      <h2 class="text-3xl font-semibold mb-4">Identidad y propósito</h2>
+      <p class="text-xl italic text-gray-300">“Ser más, para servir mejor.”</p>
+    </section>
+
+    <!-- EDUCACIÓN -->
+    <section id="educacion" class="bg-gray-800 rounded-2xl shadow-xl p-10">
+      <h2 class="text-3xl font-semibold mb-4">Educación</h2>
+      <ul class="list-disc list-inside space-y-2">
+        <li>Estudiante de Administración de Negocios en la Universidad Católica San Pablo</li>
+        <li>Formación en Liderazgo, Gestión de Equipos y Marketing Digital</li>
+        <li>Participación en proyectos de innovación educativa y social</li>
+      </ul>
+    </section>
+
+    <!-- VIRTUDES -->
+    <section id="virtudes" class="bg-gray-800 rounded-2xl shadow-xl p-10">
+      <h2 class="text-3xl font-semibold mb-4">Virtudes</h2>
+      <p class="leading-relaxed text-gray-300">
+        Me considero una persona empática, responsable y con un fuerte sentido de propósito.
+        Disfruto colaborar, motivar y aportar energía positiva a los equipos de trabajo.
+        Mi curiosidad y compromiso me impulsan a aprender constantemente y a buscar siempre mejorar lo que hago.
+      </p>
+    </section>
+
+    <!-- REDES SOCIALES -->
+<section id="redes" class="bg-gray-800 rounded-2xl shadow-xl p-10">
+  <h2 class="text-3xl font-semibold mb-8 text-center">Redes Sociales</h2>
+  <div class="grid md:grid-cols-3 gap-8 text-center">
+
+    <!-- LinkedIn -->
+    <div class="transition transform hover:scale-105">
+      <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" class="w-12 h-12 mx-auto mb-3" alt="LinkedIn">
+      <h3 class="text-xl font-semibold mb-2 text-indigo-400">LinkedIn</h3>
+      <p class="text-gray-300 text-sm mb-1">Espacio profesional donde comparto mis avances y aprendizajes.</p>
+      <a href="https://www.linkedin.com/in/santiago-velasco-rivera/" target="_blank" class="text-gray-400 text-sm italic hover:text-indigo-400 transition">
+        @Santiago Velasco Rivera
+      </a>
+    </div>
+
+    <!-- Instagram -->
+    <div class="transition transform hover:scale-105">
+      <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" class="w-12 h-12 mx-auto mb-3" alt="Instagram">
+      <h3 class="text-xl font-semibold mb-2 text-indigo-400">Instagram</h3>
+      <p class="text-gray-300 text-sm mb-1">Lugar donde comparto ideas visuales, reflexiones y momentos cotidianos.</p>
+      <a href="https://www.instagram.com/svr_0706/" target="_blank" class="text-gray-400 text-sm italic hover:text-indigo-400 transition">
+        @svr_0706
+      </a>
+    </div>
+
+    <!-- Gmail -->
+    <div class="transition transform hover:scale-105">
+      <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" class="w-12 h-12 mx-auto mb-3" alt="Gmail">
+      <h3 class="text-xl font-semibold mb-2 text-indigo-400">Correo</h3>
+      <p class="text-gray-300 text-sm mb-1">Para contacto directo y colaboraciones.</p>
+      <a href="mailto:santiago.velasco@ucsp.edu.pe" class="text-gray-400 text-sm italic hover:text-indigo-400 transition">
+        santiago.velasco@ucsp.edu.pe
+      </a>
+    </div>
+
+  </div>
+</section>
+
+    <!-- MOTIVACIÓN -->
+    <section id="motivacion" class="bg-gray-800 rounded-2xl shadow-xl p-10 text-center">
+      <h2 class="text-3xl font-semibold mb-6">Inspiración y motivación</h2>
+      <iframe class="w-full rounded-xl shadow-lg" height="400"
+        src="https://www.youtube.com/embed/azq0S0DKS50"
+        title="Motivación y propósito" frameborder="0"
+        allowfullscreen></iframe>
+    </section>
+
+    <!-- BLOG -->
+    <section id="blog" class="bg-gray-800 rounded-2xl shadow-xl p-10">
+      <h2 class="text-3xl font-semibold mb-6">Reflexiones personales</h2>
+      <article class="mb-6">
+        <h3 class="text-2xl font-semibold text-indigo-400 mb-2">El valor de la constancia</h3>
+        <p class="text-gray-300 leading-relaxed">A veces no se trata de tener todas las respuestas, sino de seguir avanzando con propósito. 
+          La constancia no siempre es visible, pero deja huellas profundas en lo que construimos.</p>
+      </article>
+      <article>
+        <h3 class="text-2xl font-semibold text-indigo-400 mb-2">Aprender a escuchar</h3>
+        <p class="text-gray-300 leading-relaxed">Escuchar no es solo oír palabras, sino entender emociones, contextos y silencios. 
+          La empatía comienza cuando decidimos escuchar de verdad.</p>
+      </article>
+    </section>
+
+    <!-- COLABORADORES -->
+    <section id="colaboradores" class="bg-gray-800 rounded-2xl shadow-xl p-10">
+      <h2 class="text-3xl font-semibold mb-8">Colaboradores</h2>
+      <div class="mb-6">
+        <input id="search" type="text" placeholder="Buscar colaborador..." class="w-full p-3 rounded-lg bg-gray-900 border border-gray-700 text-gray-200 focus:outline-none focus:ring-2 focus:ring-indigo-500" />
+      </div>
+      <div id="collab-container" class="grid md:grid-cols-3 gap-8">
+        <div class="collab bg-gray-900 rounded-xl p-6 text-center border border-gray-700 hover:shadow-lg transition">
+          <img src="https://cdn-icons-png.flaticon.com/512/1077/1077012.png" class="w-16 h-16 mx-auto mb-3">
+          <h3 class="name text-lg font-semibold text-indigo-400 mb-2">María López</h3>
+          <a href="#" target="_blank" class="text-indigo-400 hover:text-indigo-300 text-sm">Ver perfil</a>
+        </div>
+        <div class="collab bg-gray-900 rounded-xl p-6 text-center border border-gray-700 hover:shadow-lg transition">
+          <img src="https://cdn-icons-png.flaticon.com/512/1077/1077012.png" class="w-16 h-16 mx-auto mb-3">
+          <h3 class="name text-lg font-semibold text-indigo-400 mb-2">Javier Pérez</h3>
+          <a href="#" target="_blank" class="text-indigo-400 hover:text-indigo-300 text-sm">Ver perfil</a>
+        </div>
+        <div class="collab bg-gray-900 rounded-xl p-6 text-center border border-gray-700 hover:shadow-lg transition">
+          <img src="https://cdn-icons-png.flaticon.com/512/1077/1077012.png" class="w-16 h-16 mx-auto mb-3">
+          <h3 class="name text-lg font-semibold text-indigo-400 mb-2">Lucía Fernández</h3>
+          <a href="#" target="_blank" class="text-indigo-400 hover:text-indigo-300 text-sm">Ver perfil</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="contacto" class="bg-gray-800 rounded-2xl shadow-xl p-10 text-center">
+      <h2 class="text-3xl font-semibold mb-6">Contáctame</h2>
+      <p class="text-gray-300 mb-6">¿Tienes un proyecto o una idea que quieras compartir? ¡Hablemos!</p>
+      <form class="max-w-lg mx-auto space-y-4">
+        <input type="text" placeholder="Nombre" class="w-full p-3 rounded-lg bg-gray-900 border border-gray-700 text-gray-200 focus:ring-2 focus:ring-indigo-500 focus:outline-none">
+        <input type="email" placeholder="Correo" class="w-full p-3 rounded-lg bg-gray-900 border border-gray-700 text-gray-200 focus:ring-2 focus:ring-indigo-500 focus:outline-none">
+        <textarea placeholder="Mensaje" rows="4" class="w-full p-3 rounded-lg bg-gray-900 border border-gray-700 text-gray-200 focus:ring-2 focus:ring-indigo-500 focus:outline-none"></textarea>
+        <button type="submit" class="bg-indigo-600 hover:bg-indigo-500 text-white px-6 py-2 rounded-lg font-semibold transition">Enviar mensaje</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-gray-900 text-gray-400 text-center py-6 mt-16 border-t border-gray-700">
+    <p>Santiago Velasco Rivera | BLOG 2025</p>
+  </footer>
+
+  <!-- Script -->
+  <script>
+    lucide.createIcons();
+    const toggleBtn = document.getElementById('theme-toggle');
+    const body = document.body;
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'light') {
+      body.classList.add('light-mode');
+      toggleBtn.innerHTML = '☀️';
+    }
+
+    toggleBtn.addEventListener('click', () => {
+      const isLight = body.classList.toggle('light-mode');
+      localStorage.setItem('theme', isLight ? 'light' : 'dark');
+      toggleBtn.innerHTML = isLight ? '☀️' : '🌙';
+    });
+
+    // Buscador
+    const searchInput = document.getElementById('search');
+    const collabs = document.querySelectorAll('.collab');
+    searchInput.addEventListener('input', () => {
+      const query = searchInput.value.toLowerCase();
+      collabs.forEach(card => {
+        const name = card.querySelector('.name').textContent.toLowerCase();
+        card.style.display = name.includes(query) ? '' : 'none';
+      });
+    });
+  </script>
+</body>
+</html>
